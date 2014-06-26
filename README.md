@@ -22,3 +22,6 @@ $data = array(
 );
 $result = $gcm->send($registration_ids, $data);
 ```
+
+#### LICENSE
+  The MIT License (MIT)
