@@ -20,7 +20,7 @@ class GcmHttp {
 
     /**
      * @param string $api_key The API_KEY
-     * @param string $proxy The http Proxy,like this: http://theproxy.com:8080 . (Optional)
+     * @param string $proxy The http Proxy,like this: www.theproxy.com:8080 . (Optional)
      * @param string $proxy_userpwd If the Proxy need authorization. Like this: username:password (Optional)
      * @throws Exception The Api_key can't be NULL.
      */
