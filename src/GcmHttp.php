@@ -1,4 +1,5 @@
 <?php
+namespace org\ligboy\GcmHttp;
 /**
  * 
  * $Id: $
@@ -22,11 +23,11 @@ class GcmHttp {
      * @param string $api_key The API_KEY
      * @param string $proxy The http Proxy,like this: www.theproxy.com:8080 . (Optional)
      * @param string $proxy_userpwd If the Proxy need authorization. Like this: username:password (Optional)
-     * @throws Exception The Api_key can't be NULL.
+     * @throws \Exception The Api_key can't be NULL.
      */
     function __construct($api_key, $proxy = null, $proxy_userpwd = null) {
         if(empty($api_key)) {
-            throw new Exception("The Api_key can't be NULL.");
+            throw new \Exception("The Api_key can't be NULL.");
         }
 
         $this->_api_key = $api_key;
