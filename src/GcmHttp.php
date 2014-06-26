@@ -69,11 +69,8 @@ class GcmHttp {
 
                 if ($code != CURLM_OK) { break; }
 
-                // 找到刚刚完成的任务句柄
+                // find the task just done.
                 while ($done = curl_multi_info_read($multi_curl_handle)) {
-                    // 处理当前句柄的信息、错误、和返回内容
-                    $info = curl_getinfo($done['handle']);
-                    $error = curl_error($done['handle']);
 
                     $every_result = json_decode(curl_multi_getcontent($done['handle']));
 
@@ -82,7 +79,7 @@ class GcmHttp {
                     $all_results['failure'] += $every_result['failure'];
                     $all_results['results'][$map[(string) $done['handle']]] += $every_result['results'];
 
-                    // 从队列里移除上面完成处理的句柄
+                    // remove the task has been processed from the multi_curl queue.
                     curl_multi_remove_handle($multi_curl_handle, $done['handle']);
                     curl_close($done['handle']);
                 }
