@@ -9,7 +9,7 @@ GcmHttp-php
 ### Usage:
 
 ```php
-$api_key = 'AIzaSyDakOuMFHzLPhzkSiqVGRZ_UOvi62-RoAQ';
+$api_key = 'AIzaSyDak0uMFHzLPhzkSiqVGRZ_U0vi62-RoAQ';
 //$proxy = 'www.proxy.com:1080';
 $proxy = null;
 
