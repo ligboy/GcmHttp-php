@@ -1,5 +1,5 @@
 {
-    "name": "ligboy/GcmHttp",
+    "name": "ligboy/gcmhttp",
     "description": "the GCM HTTP connection server library with PHP",
     "keywords": ["gcm", "android"],
     "homepage": "https://github.com/ligboy/GcmHttp-php",
